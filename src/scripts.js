@@ -5,6 +5,10 @@ async function list() {
     console.table(data.value);
 }
 
+function trial(){
+    console.log("Trial");
+}
+
 async function get() {
     const id = 1;
     const endpoint = `/data-api/rest/Person/Id`;
