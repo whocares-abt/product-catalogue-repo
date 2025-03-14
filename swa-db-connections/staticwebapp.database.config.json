@@ -5,7 +5,7 @@
     "options": {
       "set-session-context": false 
     },
-    "connection-string": "Server=tcp:mysqlserver7382.database.windows.net,1433;Initial Catalog=product_db;Persist Security Info=False;User ID=mt1221924;Password=2p1kNNsGe7t7yie;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    "connection-string": "@env('DATABASE_CONNECTION_STRING')"
   },
   "runtime": {
     "rest": {
