@@ -9,31 +9,6 @@ function trial(){
     console.log("Trial");
 }
 
-async function get() {
-    const id = 1;
-    const endpoint = `/data-api/rest/Person/Id`;
-    const response = await fetch(`${endpoint}/${id}`);
-    const result = await response.json();
-    console.table(result.value);
-}
-
-async function update() {
-
-    const id = 1;
-    const data = {
-      Name: "Molly"
-    };
-  
-    const endpoint = '/data-api/rest/Person/Id';
-    const response = await fetch(`${endpoint}/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-    const result = await response.json();
-    console.table(result.value);
-}
-
 async function create() {
 
     const data = {
@@ -49,17 +24,3 @@ async function create() {
     const result = await response.json();
     console.table(result.value);
 }
-
-async function del() {
-    const id = 3;
-    const endpoint = '/data-api/rest/Person/Id';
-    const response = await fetch(`${endpoint}/${id}`, {
-      method: "DELETE"
-    });
-    if(response.ok) {
-      console.log(`Record deleted: ${ id }`)
-    } else {
-      console.log(response);
-    }
-}
-
