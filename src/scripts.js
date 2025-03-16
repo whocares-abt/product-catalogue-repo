@@ -6,6 +6,7 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
+    console.log(data.value); console.log(typeof(data.value));
     for (let key in data){
         item = data[key];
         console.log(item); console.log(item.ProductId);
