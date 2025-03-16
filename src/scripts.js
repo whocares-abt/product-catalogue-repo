@@ -18,18 +18,11 @@ function displayData(data) {
 
 async function list() {
     const endpoint = '/data-api/rest/Person';
-    fetch(endpoint)
-    .then(response => response.json())
-    .then(data => {
-        displayData(data);
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
-}
-
-function trial(){
-    console.log("Trial");
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(data); console.log(typeof(data));
+    displayData(data);
+    console.table(data.value);
 }
 
 async function add() {
