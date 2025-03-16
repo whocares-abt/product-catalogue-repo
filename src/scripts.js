@@ -21,15 +21,15 @@ function displayData(data) {
 
 async function list() {
     const endpoint = '/data-api/rest/Person';
-    try {
-        const response = await fetch(endpoint);
-        const data = await response.json();
-        displayData(data)
-        console.table(data.value);
-    }
-    catch (error) {
-        console.log("Error Fetching Data. Please try again after some time. If error persists, try contacting the website owner.")
-    }
+    // try {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    displayData(data)
+    console.table(data.value);
+    // }
+    // catch (error) {
+    //     console.log("Error Fetching Data. Please try again after some time. If error persists, try contacting the website owner.")
+    // }
 }
 
 function trial(){
@@ -37,7 +37,7 @@ function trial(){
 }
 
 async function add() {
-    console.log("Hi");
+    console.log("Hi 2");
     // const data = {
     //   Name: "Pedro"
     // };
