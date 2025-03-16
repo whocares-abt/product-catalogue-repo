@@ -9,7 +9,7 @@ function displayData(data) {
     dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
 
     data.forEach(item => {
-        console.log(item.ProductName);
+        console.log(dataContainer.innerHTML);
         document.innerHTML += '<tr><td>' + item.ProductName;
         document.innerHTML += '</td><td>' + item.Price;
         document.innerHTML += '</td><td>' + item.Description + '</td></tr>';
