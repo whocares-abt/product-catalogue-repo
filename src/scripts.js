@@ -9,6 +9,7 @@ function displayData(data) {
     dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
 
     data.forEach(item => {
+        console.log(item.ProductName);
         document.innerHTML += '<tr><td>' + item.ProductName;
         document.innerHTML += '</td><td>' + item.Price;
         document.innerHTML += '</td><td>' + item.Description + '</td></tr>';
@@ -28,7 +29,7 @@ async function list() {
     console.log(data.value); console.log(typeof(data.value));
 
     displayData(data.value);
-    // console.table(data.value);
+    console.table(data.value);
 }
 
 async function add() {
@@ -55,5 +56,5 @@ async function add() {
       body: JSON.stringify(data)
     });
     const result = await response.json();
-    // console.table(result.value);
+    console.table(result.value);
 }
