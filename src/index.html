@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<h1>ELL887 Assignment 2</h1>
-<div>
-    <button id="list" onclick="list()">List Items</button>
-    <button id="add" onclick="add()">Add New Product</button>
-    <button id="trial" onclick="trial()">Trial</button>
-</div>
-<script src="scripts.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
 
+<body>
+    <h1>ELL887 Assignment 2</h1>
+    <div id="user-commands">
+        <button id="list" onclick="list()">List Items</button>
+        <button id="add" onclick="add()">Add New Product</button>
+        <button id="trial" onclick="trial()">Trial</button>
+    </div>
+    
+    <div id="data-container">
+        <!-- Insert SQL Table here -->
+    </div>
+    
+    
+    <script src="scripts.js"></script>
+</body>
 </html>
