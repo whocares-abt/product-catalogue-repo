@@ -5,22 +5,24 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
-    dataContainer.innerHTML = '';
-    // console.log(data.value); console.log(typeof(data.value));
-    // for (let key in data){
-    //     item = data[key];
-    //     console.log(item); console.log(item.ProductId);
+    dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody></tbody></table>';
+    //     <tr>
+    //     <td>Data 1</td>
+    //     <td>Data 2</td>
+    //     <td>Data 3</td>
+    // </tr>
+    // <tr>
+    //     <td>Data 4</td>
+    //     <td>Data 5</td>
+    //     <td>Data 6</td>
+    // </tr>
+
+    // data.forEach(item => {
     //     const dataItem = document.createElement('div');
     //     dataItem.classList.add('data-item');
     //     dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
     //     dataContainer.appendChild(dataItem);
-    // }
-    data.forEach(item => {
-        const dataItem = document.createElement('div');
-        dataItem.classList.add('data-item');
-        dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
-        dataContainer.appendChild(dataItem);
-    });
+    // });
 }
 
 
