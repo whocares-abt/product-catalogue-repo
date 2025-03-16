@@ -8,7 +8,10 @@ function displayData(data) {
     dataContainer.innerHTML = '';
     console.log(typeof(data));
     console.log(data);
+    data = Object.toString(data);
     if(typeof(data) === "string"){data = JSON.parse(data);}
+    // const data = Object.entries(data).map(([name, obj]) => ({ name, ...obj }))
+
 
     data.forEach(item => {
         const dataItem = document.createElement('div');
@@ -45,7 +48,7 @@ function trial(){
 }
 
 async function add() {
-    console.log("Hello 2");
+    console.log("Hello 3");
     // const data = {
     //   Name: "Pedro"
     // };
