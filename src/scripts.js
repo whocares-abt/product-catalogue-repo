@@ -6,16 +6,17 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     // Displaying Data as Table
-    dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
+    innerHTMLstring = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
 
     data.forEach(item => {
-        console.log(dataContainer.innerHTML);
-        document.innerHTML += '<tr><td>' + item.ProductName;
-        document.innerHTML += '</td><td>' + item.Price;
-        document.innerHTML += '</td><td>' + item.Description + '</td></tr>';
+        console.log(innerHTMLstring);
+        innerHTMLstring += '<tr><td>' + item.ProductName;
+        innerHTMLstring += '</td><td>' + item.Price;
+        innerHTMLstring += '</td><td>' + item.Description + '</td></tr>';
     });
 
-    document.innerHTML += '</tbody></table>';
+    innerHTMLstring += '</tbody></table>';
+    dataContainer.innerHTML = innerHTMLstring;
 }
 
 
