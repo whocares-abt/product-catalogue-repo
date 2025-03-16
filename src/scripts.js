@@ -6,7 +6,9 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
-
+    for (let key in data){
+        console.log(key, data[key]);
+    }
     data.forEach(item => {
         const dataItem = document.createElement('div');
         dataItem.classList.add('data-item');
@@ -26,7 +28,6 @@ async function list() {
 }
 
 async function add() {
-    console.log("Hello 3");
     prod_name = document.getElementById("ProdName").value;
     price = document.getElementById("Price").value;
     desc = document.getElementById("Description").value;
