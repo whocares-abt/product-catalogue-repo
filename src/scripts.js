@@ -8,12 +8,18 @@ function displayData(data) {
     dataContainer.innerHTML = '';
     for (let key in data){
         item = data[key];
+        console.log(item); console.log(item.ProductId);
         const dataItem = document.createElement('div');
         dataItem.classList.add('data-item');
         dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
         dataContainer.appendChild(dataItem);
     }
-
+    // data.forEach(item => {
+    //     const dataItem = document.createElement('div');
+    //     dataItem.classList.add('data-item');
+    //     dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
+    //     dataContainer.appendChild(dataItem);
+    // });
 }
 
 
