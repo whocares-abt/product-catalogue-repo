@@ -7,7 +7,7 @@ function displayData(data) {
     
     dataContainer.innerHTML = '';
     console.log(typeof(data))
-    data = JSON.parse(data)
+    data = Object.entries(data)
     // Iterate over the data and create HTML elements to display it
     data.forEach(
         item => {
@@ -38,7 +38,7 @@ function trial(){
 }
 
 async function add() {
-    console.log("Hi 3");
+    console.log("Hi 5");
     // const data = {
     //   Name: "Pedro"
     // };
