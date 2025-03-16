@@ -13,7 +13,7 @@ function displayData(data) {
         item => {
         const dataItem = document.createElement('div');
         dataItem.classList.add('data-item');
-        dataItem.textContent = `ID: ${item.id}, Name: ${item.name}, Age: ${item.age}`;
+        dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
         dataContainer.appendChild(dataItem);
     }
     );
@@ -38,7 +38,7 @@ function trial(){
 }
 
 async function add() {
-    console.log("Hi 5");
+    console.log("Hi 6");
     // const data = {
     //   Name: "Pedro"
     // };
