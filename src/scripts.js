@@ -6,6 +6,7 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
+    console.log(typeof(data))
     data = JSON.parse(data)
     // Iterate over the data and create HTML elements to display it
     data.forEach(
