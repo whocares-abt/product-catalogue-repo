@@ -9,6 +9,7 @@ function displayData(data) {
     console.log(typeof(data));
     console.log(data);
     data = Object.toString(data);
+    console.log(data);
     if(typeof(data) === "string"){data = JSON.parse(data);}
     // const data = Object.entries(data).map(([name, obj]) => ({ name, ...obj }))
 
