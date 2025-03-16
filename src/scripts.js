@@ -6,9 +6,6 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
-    data = Object.entries(data);
-    // Iterate over the data and create HTML elements to display it
-    console.log(data);
 
     data.forEach(item => {
         const dataItem = document.createElement('div');
