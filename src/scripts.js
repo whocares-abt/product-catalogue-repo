@@ -7,14 +7,13 @@ function displayData(data) {
     
     dataContainer.innerHTML = '';
     for (let key in data){
-        console.log(key, data[key]);
-    }
-    data.forEach(item => {
+        item = data[key];
         const dataItem = document.createElement('div');
         dataItem.classList.add('data-item');
         dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
         dataContainer.appendChild(dataItem);
-    });
+    }
+
 }
 
 
