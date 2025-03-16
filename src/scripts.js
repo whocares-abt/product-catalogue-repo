@@ -6,6 +6,9 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
+    console.log(typeof(data));
+    console.log(data);
+    if(typeof(data) === "string"){data = JSON.parse(data);}
 
     data.forEach(item => {
         const dataItem = document.createElement('div');
@@ -42,7 +45,7 @@ function trial(){
 }
 
 async function add() {
-    console.log("Hello 1");
+    console.log("Hello 2");
     // const data = {
     //   Name: "Pedro"
     // };
