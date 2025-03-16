@@ -34,10 +34,18 @@ function trial(){
 
 async function add() {
     console.log("Hello 3");
+    prod_name = document.getElementById("ProdName").value;
+    price = document.getElementById("Price").value;
+    desc = document.getElementById("Price").value;
+
+    if (prod_name == null || price == null || desc == null){
+        console.log("Please enter all fields"); return;
+    }
+
     const data = {
-      ProductName: "Desires",
-      Price: 13,
-      Description: "Miko"
+      ProductName: prod_name,
+      Price: price,
+      Description: desc
     };
 
     const endpoint = `/data-api/rest/Person/`;
