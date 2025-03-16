@@ -36,7 +36,7 @@ async function add() {
     console.log("Hello 3");
     prod_name = document.getElementById("ProdName").value;
     price = document.getElementById("Price").value;
-    desc = document.getElementById("Price").value;
+    desc = document.getElementById("Description").value;
 
     if (prod_name == null || price == null || desc == null){
         console.log("Please enter all fields"); return;
