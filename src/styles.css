@@ -14,14 +14,3 @@ th {
 body {
   font-family: Arial, sans-serif;
 }
-
-.container {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-}
-
-.data-item {
-  margin-bottom: 10px;
-}

@@ -5,37 +5,34 @@ document.addEventListener('DOMContentLoaded', function() {
 function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
-    dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody></tbody></table>';
-    //     <tr>
-    //     <td>Data 1</td>
-    //     <td>Data 2</td>
-    //     <td>Data 3</td>
-    // </tr>
-    // <tr>
-    //     <td>Data 4</td>
-    //     <td>Data 5</td>
-    //     <td>Data 6</td>
-    // </tr>
+    // Displaying Data as Table
+    dataContainer.innerHTML = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
 
-    // data.forEach(item => {
-    //     const dataItem = document.createElement('div');
-    //     dataItem.classList.add('data-item');
-    //     dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
-    //     dataContainer.appendChild(dataItem);
-    // });
+    data.forEach(item => {
+        document.innerHTML += '<tr><td>' + item.ProductName;
+        document.innerHTML += '</td><td>' + item.Price;
+        document.innerHTML += '</td><td>' + item.Description + '</td></tr>';
+    });
+
+    document.innerHTML += '</tbody></table>';
 }
 
 
 async function list() {
+    // Connecting to Cloud
     const endpoint = '/data-api/rest/Person';
     const response = await fetch(endpoint);
     const data = await response.json();
+
     console.log(data); console.log(typeof(data));
+    console.log(data.value); console.log(typeof(data.value));
+
     displayData(data.value);
-    console.table(data.value);
+    // console.table(data.value);
 }
 
 async function add() {
+    // Getting Entry Data from User
     prod_name = document.getElementById("ProdName").value;
     price = document.getElementById("Price").value;
     desc = document.getElementById("Description").value;
@@ -50,6 +47,7 @@ async function add() {
       Description: desc
     };
 
+    // Connecting to Cloud
     const endpoint = `/data-api/rest/Person/`;
     const response = await fetch(endpoint, {
       method: "POST",
@@ -57,5 +55,5 @@ async function add() {
       body: JSON.stringify(data)
     });
     const result = await response.json();
-    console.table(result.value);
+    // console.table(result.value);
 }
