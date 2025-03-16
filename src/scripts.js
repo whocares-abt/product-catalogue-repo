@@ -6,21 +6,21 @@ function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     
     dataContainer.innerHTML = '';
-    console.log(data.value); console.log(typeof(data.value));
-    for (let key in data){
-        item = data[key];
-        console.log(item); console.log(item.ProductId);
-        const dataItem = document.createElement('div');
-        dataItem.classList.add('data-item');
-        dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
-        dataContainer.appendChild(dataItem);
-    }
-    // data.forEach(item => {
+    // console.log(data.value); console.log(typeof(data.value));
+    // for (let key in data){
+    //     item = data[key];
+    //     console.log(item); console.log(item.ProductId);
     //     const dataItem = document.createElement('div');
     //     dataItem.classList.add('data-item');
     //     dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
     //     dataContainer.appendChild(dataItem);
-    // });
+    // }
+    data.forEach(item => {
+        const dataItem = document.createElement('div');
+        dataItem.classList.add('data-item');
+        dataItem.textContent = `ProductId: ${item.ProductId}, ProductName: ${item.ProductName}, Price (in Dollars): ${item.Price}, Description: ${item.Description}`;
+        dataContainer.appendChild(dataItem);
+    });
 }
 
 
@@ -29,7 +29,7 @@ async function list() {
     const response = await fetch(endpoint);
     const data = await response.json();
     console.log(data); console.log(typeof(data));
-    displayData(data);
+    displayData(data.value);
     console.table(data.value);
 }
 
