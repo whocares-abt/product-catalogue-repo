@@ -1,19 +1,3 @@
-const { BlobServiceClient, ContainerClient} = require("@azure/storage-blob");
-
-const accountName = "catalogueblob";
-const sasToken = "@env('BLOB_SAS_TOKEN')";
-const accountURL = `https://${accountName}.blob.core.windows.net?${sasToken}`;
-const blobServiceClient = new BlobServiceClient(accountURL);
-const blobContainerClient = new ContainerClient(accountURL);
-
-async function uploadBlobFromReadStream(containerClient, blobName, localFilePath) {
-    const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-    console.log("HELLO");
-    await blockBlobClient.uploadFile(localFilePath);
-}
-
-uploadBlobFromReadStream(blobContainerClient, 'TrialImg', 'Trial');
-
 document.addEventListener('DOMContentLoaded', function() {
     list();
 });
