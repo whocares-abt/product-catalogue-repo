@@ -18,7 +18,6 @@ async function uploadBlobFromReadStream(containerClient, blobName, localFilePath
 
 uploadBlobFromReadStream(blobContainerClient, 'TrialImg', 'Trial');
 
-
 document.addEventListener('DOMContentLoaded', function() {
     list();
 });
