@@ -1,8 +1,4 @@
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-
-const { BlobServiceClient, ContainerClient } = require("@azure/storage-blob");
+import { BlobServiceClient, ContainerClient } from "./node_modules/@azure/storage-blob";
 
 const accountName = "catalogueblob";
 const sasToken = "@env('BLOB_SAS_TOKEN')";
