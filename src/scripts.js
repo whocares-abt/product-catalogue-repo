@@ -12,8 +12,7 @@ function display_data(data) {
         console.log(innerHTMLstring);
         innerHTMLstring += '<tr><td>' + item.ProductName;
         innerHTMLstring += '</td><td>' + item.Price;
-        innerHTMLstring += '</td><td>' + item.Description; 
-        innerHTMLstring += '</td><td>' + item.BlobURL;'</td></tr>';
+        innerHTMLstring += '</td><td>' + item.Description +'</td></tr>';
     });
 
     innerHTMLstring += '</tbody></table>';
@@ -34,21 +33,12 @@ async function list() {
     console.table(data.value);
 }
 
-async function generate_blob(prod_img){
-    blob_url = 0;
-
-    return blob_url;
-}
 
 async function add() {
     // Getting Entry Data from User
     prod_name = document.getElementById("ProdName").value;
     price = document.getElementById("Price").value;
     desc = document.getElementById("Description").value;
-    prod_img = document.getElementById("ProdImage").value;
-
-    blob_url = "";
-    if (prod_img != null){blob_url = generate_blob(prod_img);}
 
     if (prod_name == null || price == null || desc == null){
         console.log("Please enter required fields"); return;
@@ -58,7 +48,6 @@ async function add() {
         ProductName: prod_name,
         Price: price,
         Description: desc,
-        BlobURL: blob_url
     };
 
     // Connecting to Cloud

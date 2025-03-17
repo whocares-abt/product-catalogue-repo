@@ -3,9 +3,5 @@
   "version": "1.0.0",
   "scripts": {
     "start": "sirv ./src public --cors --single --no-clear --port 8000"
-  },
-  "dependencies": {
-    "@azure/identity": "^4.8.0",
-    "@azure/storage-blob": "^12.26.0"
   }
 }
