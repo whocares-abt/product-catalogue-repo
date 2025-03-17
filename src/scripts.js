@@ -1,5 +1,5 @@
-import { BlobServiceClient } from "node_modules/@azure/storage-blob";
-import { ContainerClient } from "node_modules/@azure/storage-blob";
+import { BlobServiceClient } from "@azure/storage-blob";
+import { ContainerClient } from "@azure/storage-blob";
 
 const accountName = "catalogueblob";
 const sasToken = "@env('BLOB_SAS_TOKEN')";
