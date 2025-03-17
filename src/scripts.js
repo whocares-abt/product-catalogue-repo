@@ -6,7 +6,7 @@ function display_data(data) {
     const data_container = document.getElementById('data-container');
     
     // Displaying Data as Table
-    innerHTMLstring = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th><th>Product Image</th></tr></thead><tbody>';
+    innerHTMLstring = '<table><thead><tr><th>Product Name</th><th>Price</th><th>Description</th></tr></thead><tbody>';
 
     data.forEach(item => {
         console.log(innerHTMLstring);
