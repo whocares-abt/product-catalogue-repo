@@ -14,7 +14,7 @@ uploadBlobFromReadStream(blobContainerClient, 'TrialImg', 'Trial');
 
 async function uploadBlobFromReadStream(containerClient, blobName, localFilePath) {
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-  
+    console.log("HELLO");
     await blockBlobClient.uploadFile(localFilePath);
 }
 
