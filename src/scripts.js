@@ -1,5 +1,5 @@
-const { BlobServiceClient, ContainerClient } = require('@azure/storage-blob');
-const { DefaultAzureCredential } = require('@azure/identity');
+const { BlobServiceClient, ContainerClient } = NodeJS.Require('@azure/storage-blob');
+const { DefaultAzureCredential } = NodeJS.Require('@azure/identity');
 
 const accountName = "catalogueblob";
 const sasToken = "@env('BLOB_SAS_TOKEN')";
