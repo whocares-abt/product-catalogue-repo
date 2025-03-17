@@ -10,13 +10,14 @@ const accountURL = `https://${accountName}.blob.core.windows.net?${sasToken}`;
 const blobServiceClient = new BlobServiceClient(accountURL);
 const blobContainerClient = new ContainerClient(accountURL);
 
-uploadBlobFromReadStream(blobContainerClient, 'TrialImg', 'Trial');
-
 async function uploadBlobFromReadStream(containerClient, blobName, localFilePath) {
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
     console.log("HELLO");
     await blockBlobClient.uploadFile(localFilePath);
 }
+
+uploadBlobFromReadStream(blobContainerClient, 'TrialImg', 'Trial');
+
 
 document.addEventListener('DOMContentLoaded', function() {
     list();
